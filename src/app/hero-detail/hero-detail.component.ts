@@ -12,6 +12,7 @@ import { ApplicationService } from '../application.service';
 })
 export class HeroDetailComponent implements OnInit {
   application: Application | undefined;
+  data: Application | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,8 +30,12 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(application => this.application = application);
   }
 
-  submit(application: Application): void{
-    localStorage.setItem('Application', JSON.stringify(application));
+  submit(): void{
+    localStorage.setItem('appSession', JSON.stringify(this.application));
+  }
+
+  getSession() {
+    return localStorage.getItem('appSession');
   }
 
   goBack(): void {
