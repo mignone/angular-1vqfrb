@@ -30,7 +30,8 @@ export class HeroDetailComponent implements OnInit {
   }
 
   submit(): void{
-    
+
+    localStorage.setItem('Application', JSON.stringify(application));
   }
 
   goBack(): void {
