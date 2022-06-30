@@ -4,6 +4,9 @@
   <div>
     <label for="application-name">Application name: </label>
     <input id="application-name" [(ngModel)]="application.name" placeholder="Application name"/>
+    <label for="application-description">Application description: </label>
+    <textarea id="application-description" [(ngModel)]="application.description" placeholder="Application description"></textarea>
+    <input type="submit" value="Submit">
   </div>
   <button type="button" (click)="goBack()">go back</button>
 </div>
