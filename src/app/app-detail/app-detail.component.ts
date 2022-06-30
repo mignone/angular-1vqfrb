@@ -6,11 +6,11 @@ import { Application } from '../application';
 import { ApplicationService } from '../application.service';
 
 @Component({
-  selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html',
-  styleUrls: [ './hero-detail.component.css' ]
+  selector: 'app-app-detail',
+  templateUrl: './app-detail.component.html',
+  styleUrls: [ './app-detail.component.css' ]
 })
-export class HeroDetailComponent implements OnInit {
+export class AppDetailComponent implements OnInit {
   application: Application | undefined;
   data: Application | undefined;
 
