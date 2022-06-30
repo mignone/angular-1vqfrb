@@ -30,7 +30,6 @@ export class HeroDetailComponent implements OnInit {
   }
 
   submit(application: Application): void{
-
     localStorage.setItem('Application', JSON.stringify(application));
   }
 
