@@ -9,8 +9,11 @@
     <br />
     <label for="application-description">Application description: </label>
     <textarea id="application-description" [(ngModel)]="application.description" placeholder="Application description"></textarea>
-    <input type="submit" value="Submit">
+    <br />
+    <button type="button" (click)="submit()">Submit</button>
   </div>
+  <br />
+  <br />
   <button type="button" (click)="goBack()">go back</button>
 </div>
 

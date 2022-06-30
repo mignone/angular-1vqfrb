@@ -29,6 +29,10 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(application => this.application = application);
   }
 
+  submit(): void{
+    
+  }
+
   goBack(): void {
     this.location.back();
   }
