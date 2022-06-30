@@ -29,9 +29,9 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(application => this.application = application);
   }
 
-  submit(): void{
+  submit(Application: string): void{
 
-    localStorage.setItem('Application', JSON.stringify(application));
+    localStorage.setItem('Application', JSON.stringify(Application));
   }
 
   goBack(): void {
