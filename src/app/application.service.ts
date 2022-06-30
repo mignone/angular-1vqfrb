@@ -2,27 +2,27 @@ import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
 
-import { Hero } from './hero';
-import { HEROES } from './mock-heroes';
+import { Application } from './application';
+import { APPLICATIONS } from './mock-applications';
 import { MessageService } from './message.service';
 
 @Injectable({ providedIn: 'root' })
-export class HeroService {
+export class ApplicationService {
 
   constructor(private messageService: MessageService) { }
 
-  getHeroes(): Observable<Hero[]> {
-    const heroes = of(HEROES);
-    this.messageService.add('HeroService: fetched heroes');
-    return heroes;
+  getApplications(): Observable<Application[]> {
+    const applications = of(APPLICATIONS);
+    this.messageService.add('DeveloperService: seen application');
+    return applications;
   }
 
-  getHero(id: number): Observable<Hero> {
+  getApplication(id: number): Observable<Application> {
     // For now, assume that a hero with the specified `id` always exists.
     // Error handling will be added in the next step of the tutorial.
-    const hero = HEROES.find(h => h.id === id)!;
-    this.messageService.add(`HeroService: fetched hero id=${id}`);
-    return of(hero);
+    const application = APPLICATIONS.find(h => h.id === id)!;
+    this.messageService.add(`DeveloperService: seen application id=${id}`);
+    return of(application);
   }
 }
 

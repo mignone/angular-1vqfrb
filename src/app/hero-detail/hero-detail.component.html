@@ -1,9 +1,9 @@
-<div *ngIf="hero">
-  <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
+<div *ngIf="application">
+  <h2>{{application.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{application.id}}</div>
   <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+    <label for="application-name">Application name: </label>
+    <input id="application-name" [(ngModel)]="application.name" placeholder="Application name"/>
   </div>
   <button type="button" (click)="goBack()">go back</button>
 </div>

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Application } from '../application';
 import { ApplicationService } from '../application.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: [ './dashboard.component.css' ]
+  selector: 'app-applications',
+  templateUrl: './applications.component.html',
+  styleUrls: ['./applications.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class ApplicationsComponent implements OnInit {
   applications: Application[] = [];
 
   constructor(private applicationService: ApplicationService) { }
@@ -18,7 +19,7 @@ export class DashboardComponent implements OnInit {
 
   getApplications(): void {
     this.applicationService.getApplications()
-      .subscribe(applications => this.applications = applications.slice(1, 5));
+    .subscribe(applications => this.applications = applications);
   }
 }
 
